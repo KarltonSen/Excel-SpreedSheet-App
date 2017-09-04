@@ -6,6 +6,7 @@ using System.Data.SqlClient;
 
 using Excel = Microsoft.Office.Interop.Excel;
 using OrderReceiptGUI.Extensions;
+using System.Reflection;
 
 namespace OrderReceiptGUI
 {
@@ -80,73 +81,8 @@ namespace OrderReceiptGUI
         {
             MessageBox.Show("" +
                 "Program: NCAT Order Receipt\n\n" +
-                "Author: Joshua Karlton-Senaye\n\n" +
-                "Director: Dr.William");
-        }
-
-        private void SaveToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            //  C: \Users\the\OneDrive\A & T Check
-            //  C: \Users\the\OneDrive - Cabarrus County Schools\P3 - BP12 - jsenaye9631
-            string newfileName = @"C:\Users\the\OneDrive\A&T Check\NCAT Order Receipt.xls";
-            string path = System.Reflection.Assembly.GetExecutingAssembly().Location;
-            string filename = Path.Combine(path, newfileName);
-            //   System.IO.StreamWriter file = new System.IO.StreamWriter(NewfileName);
-            //  file.WriteLine(NewfileName);
-
-
-            if (File.Exists(newfileName))
-            {
-                File.Delete(newfileName);
-            }
-
-            Excel.Application oApp;
-            Excel.Worksheet oSheet;
-            Excel.Workbook oBook;
-
-            oApp = new Excel.Application();
-            oBook = oApp.Workbooks.Add();
-            oSheet = (Excel.Worksheet)oBook.Worksheets.get_Item(1);
-         
-            // Main Headers
-            oSheet.Cells[1, 1] = "Item Name";
-            oSheet.Cells[1, 2] = "Item Name";
-            oSheet.Cells[1, 3] = "Address";
-            oSheet.Cells[1, 4] = "City";
-            oSheet.Cells[1, 5] = "State";
-            oSheet.Cells[1, 6] = "ZipCode Area";
-            oSheet.Cells[1, 7] = "Quantity";
-            oSheet.Cells[1, 8] = "Intial Budget";
-            oSheet.Cells[1, 9] = "Intial Cost";
-            oSheet.Cells[1, 10] = "Sales Tax";
-            oSheet.Cells[1, 11] = "Amount Due Before Tax";
-            oSheet.Cells[1, 12] = "Final Cost";
-            oSheet.Cells[1, 13] = "Final Amount Due";
-            oSheet.Cells[1, 14] = "Final Budget";
-
-            //All Data REF
-            oSheet.Cells[2, 1] = txtLaboratory.Text;
-            oSheet.Cells[2, 2] = txtItemName.Text;
-            oSheet.Cells[2, 3] = txtAddress.Text;
-            oSheet.Cells[2, 4] = txtCity.Text;
-            oSheet.Cells[2, 5] = txtState.Text;
-            oSheet.Cells[2, 6] = txtZipCode.Text;
-            oSheet.Cells[2, 7] = txtQuantity.Text;
-            oSheet.Cells[2, 8] = txtBudget.Text;
-            oSheet.Cells[2, 9] = txtCost.Text;
-            oSheet.Cells[2, 10] = dblTax.ToString("C2");
-            oSheet.Cells[2, 11] = dblTotal.ToString("C2");
-            oSheet.Cells[2, 12] = dblCost.ToString("C2");
-            oSheet.Cells[2, 13] = dblNetTotal.ToString("C2");
-            oSheet.Cells[2, 14] = dblBudgetTotal.ToString("C2");
-
-
-
-            //oBook.SaveAs(NewfileName);
-            // file.Close();
-
-            oBook.Close();
-            oApp.Quit();
+                "Author: Joshua Karlton-Senaye & Ben Lutin\n\n" +
+                "Director: Dr. William");
         }
 
         private void OutputNewRecordToolStripMenuItem_Click(object sender, EventArgs e)
@@ -357,6 +293,146 @@ namespace OrderReceiptGUI
         private void BtnCalculate_Click(object sender, EventArgs e)
         {
             ProcessInput();
+        }
+
+        private void AddToExistingFileToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            string path;
+            if (GetSavePath(out path))
+            {
+                SaveWorkbook(path, true);
+            }
+        }
+
+        private void SaveToNewFileToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            string path;
+            if(GetSavePath(out path))
+            {
+                SaveWorkbook(path, false);
+            }
+        }
+
+        private bool GetSavePath(out string path)
+        {
+            SaveFileDialog dialog = new SaveFileDialog
+            {
+                DefaultExt = ".xlsx"
+            };
+            dialog.Filter = "Excel files (*.xlsx) |*.xlsx|All files (*.*)|*.*";
+            DialogResult result = dialog.ShowDialog();
+            path = dialog.FileName;
+            return result == DialogResult.OK;
+        }
+
+        private void SaveWorkbook(string path, bool append)
+        {
+            if(!append)
+            {
+                if (File.Exists(path))
+                {
+                    File.Delete(path);
+                }
+
+                Excel.Application oApp = new Excel.Application();
+
+                if (oApp == null)
+                {
+                    MessageBox.Show("Microsoft Excel could not be started. Please check that your Office installation has Microsoft Excel.");
+                    return;
+                }
+
+                Excel.Workbook oBook = oApp.Workbooks.Add();
+
+                if(oBook == null)
+                {
+                    MessageBox.Show("Microsoft Excel failed to create a workbook. Exiting.");
+                    return;
+                }
+
+                // Get first page
+                Excel.Worksheet oSheet = (Excel.Worksheet)oBook.Worksheets.get_Item(1);
+
+                if (oSheet == null)
+                {
+                    MessageBox.Show("Microsoft Excel failed to create a worksheet. Exiting.");
+                    return;
+                }
+
+                WriteWorksheetData(oSheet, txtItemName.Text);
+
+                oSheet.SaveAs(path);
+                oBook.Close();
+                oApp.Quit();
+            } 
+            else
+            {
+                if(!File.Exists(path))
+                {
+                    // There was no point of appending. Just create a new workbook
+                    SaveWorkbook(path, false);
+                }
+                else
+                {
+                    // Continue append
+                    UpdateWorksheet(path);
+                }
+            }
+        }
+
+        private void WriteWorksheetData(Excel.Worksheet oSheet, string name)
+        {
+            try
+            {
+                oSheet.Name = txtItemName.Text;
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Failed to save workbook. Reason: " + e.Message);
+                return;
+            }
+
+            // Main Headers
+            oSheet.Cells[1, 1] = "Laboratory";
+            oSheet.Cells[1, 2] = "Item Name";
+            oSheet.Cells[1, 3] = "Address";
+            oSheet.Cells[1, 4] = "City";
+            oSheet.Cells[1, 5] = "State";
+            oSheet.Cells[1, 6] = "Zip code";
+            oSheet.Cells[1, 7] = "Quantity";
+            oSheet.Cells[1, 8] = "Intial Budget";
+            oSheet.Cells[1, 9] = "Intial Cost";
+            oSheet.Cells[1, 10] = "Sales Tax";
+            oSheet.Cells[1, 11] = "Amount Due Before Tax";
+            oSheet.Cells[1, 12] = "Final Cost";
+            oSheet.Cells[1, 13] = "Final Amount Due";
+            oSheet.Cells[1, 14] = "Final Budget";
+
+            //All Data REF
+            oSheet.Cells[2, 1] = txtLaboratory.Text;
+            oSheet.Cells[2, 2] = txtItemName.Text;
+            oSheet.Cells[2, 3] = txtAddress.Text;
+            oSheet.Cells[2, 4] = txtCity.Text;
+            oSheet.Cells[2, 5] = txtState.Text;
+            oSheet.Cells[2, 6] = txtZipCode.Text;
+            oSheet.Cells[2, 7] = txtQuantity.Text;
+            oSheet.Cells[2, 8] = txtBudget.Text;
+            oSheet.Cells[2, 9] = txtCost.Text;
+            oSheet.Cells[2, 10] = dblTax.ToString("C2");
+            oSheet.Cells[2, 11] = dblTotal.ToString("C2");
+            oSheet.Cells[2, 12] = dblCost.ToString("C2");
+            oSheet.Cells[2, 13] = dblNetTotal.ToString("C2");
+            oSheet.Cells[2, 14] = dblBudgetTotal.ToString("C2");
+        }
+
+        private void UpdateWorksheet(string path)
+        {
+            Excel.Application oApp = new Excel.Application();
+            Excel.Workbook oBook = oApp.Workbooks.Open(path);
+            Excel.Worksheet oSheet = (Excel.Worksheet)oBook.Worksheets.Add();
+            WriteWorksheetData(oSheet, txtItemName.Text);
+            oBook.Close();
+            oApp.Quit();
         }
     }
 }

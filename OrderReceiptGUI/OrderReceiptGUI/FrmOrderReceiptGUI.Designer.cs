@@ -32,17 +32,14 @@
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.calculateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.saveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.addToExistingFileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.saveToNewFileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.showExcelFileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.clearToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.moveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.moveCopiedFileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.deleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.deleteCopiedFileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.copyToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.copyOriginalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lblName = new System.Windows.Forms.Label();
             this.lblAddress = new System.Windows.Forms.Label();
             this.lblCity = new System.Windows.Forms.Label();
@@ -72,10 +69,7 @@
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileToolStripMenuItem,
-            this.moveToolStripMenuItem,
-            this.deleteToolStripMenuItem,
-            this.helpToolStripMenuItem,
-            this.copyToolStripMenuItem1});
+            this.helpToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(848, 24);
@@ -87,6 +81,7 @@
             this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.calculateToolStripMenuItem,
             this.saveToolStripMenuItem,
+            this.showExcelFileToolStripMenuItem,
             this.clearToolStripMenuItem,
             this.toolStripSeparator1,
             this.exitToolStripMenuItem});
@@ -97,65 +92,57 @@
             // calculateToolStripMenuItem
             // 
             this.calculateToolStripMenuItem.Name = "calculateToolStripMenuItem";
-            this.calculateToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
+            this.calculateToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
             this.calculateToolStripMenuItem.Text = "Calculate";
             this.calculateToolStripMenuItem.Click += new System.EventHandler(this.CalculateToolStripMenuItem_Click);
             // 
             // saveToolStripMenuItem
             // 
+            this.saveToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.addToExistingFileToolStripMenuItem,
+            this.saveToNewFileToolStripMenuItem});
             this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
-            this.saveToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
-            this.saveToolStripMenuItem.Text = "Save to Excel file";
-            this.saveToolStripMenuItem.Click += new System.EventHandler(this.SaveToolStripMenuItem_Click);
+            this.saveToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
+            this.saveToolStripMenuItem.Text = "Save";
+            // 
+            // addToExistingFileToolStripMenuItem
+            // 
+            this.addToExistingFileToolStripMenuItem.Name = "addToExistingFileToolStripMenuItem";
+            this.addToExistingFileToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
+            this.addToExistingFileToolStripMenuItem.Text = "Add to existing file";
+            this.addToExistingFileToolStripMenuItem.Click += new System.EventHandler(this.AddToExistingFileToolStripMenuItem_Click);
+            // 
+            // saveToNewFileToolStripMenuItem
+            // 
+            this.saveToNewFileToolStripMenuItem.Name = "saveToNewFileToolStripMenuItem";
+            this.saveToNewFileToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
+            this.saveToNewFileToolStripMenuItem.Text = "Save to new file";
+            this.saveToNewFileToolStripMenuItem.Click += new System.EventHandler(this.SaveToNewFileToolStripMenuItem_Click);
+            // 
+            // showExcelFileToolStripMenuItem
+            // 
+            this.showExcelFileToolStripMenuItem.Name = "showExcelFileToolStripMenuItem";
+            this.showExcelFileToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
+            this.showExcelFileToolStripMenuItem.Text = "Show Excel File";
             // 
             // clearToolStripMenuItem
             // 
             this.clearToolStripMenuItem.Name = "clearToolStripMenuItem";
-            this.clearToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
+            this.clearToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
             this.clearToolStripMenuItem.Text = "Clear Result";
             this.clearToolStripMenuItem.Click += new System.EventHandler(this.ClearToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(169, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(150, 6);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.ExitToolStripMenuItem_Click);
-            // 
-            // moveToolStripMenuItem
-            // 
-            this.moveToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.moveCopiedFileToolStripMenuItem});
-            this.moveToolStripMenuItem.Name = "moveToolStripMenuItem";
-            this.moveToolStripMenuItem.Size = new System.Drawing.Size(52, 20);
-            this.moveToolStripMenuItem.Text = "Move ";
-            // 
-            // moveCopiedFileToolStripMenuItem
-            // 
-            this.moveCopiedFileToolStripMenuItem.Name = "moveCopiedFileToolStripMenuItem";
-            this.moveCopiedFileToolStripMenuItem.Size = new System.Drawing.Size(166, 22);
-            this.moveCopiedFileToolStripMenuItem.Text = "Move Copied File";
-            this.moveCopiedFileToolStripMenuItem.Click += new System.EventHandler(this.MoveCopiedFileToolStripMenuItem_Click);
-            // 
-            // deleteToolStripMenuItem
-            // 
-            this.deleteToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.deleteCopiedFileToolStripMenuItem});
-            this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
-            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(52, 20);
-            this.deleteToolStripMenuItem.Text = "Delete";
-            // 
-            // deleteCopiedFileToolStripMenuItem
-            // 
-            this.deleteCopiedFileToolStripMenuItem.Name = "deleteCopiedFileToolStripMenuItem";
-            this.deleteCopiedFileToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
-            this.deleteCopiedFileToolStripMenuItem.Text = "Delete Copied File";
-            this.deleteCopiedFileToolStripMenuItem.Click += new System.EventHandler(this.DeleteCopiedFileToolStripMenuItem_Click);
             // 
             // helpToolStripMenuItem
             // 
@@ -171,21 +158,6 @@
             this.aboutToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.aboutToolStripMenuItem.Text = "About";
             this.aboutToolStripMenuItem.Click += new System.EventHandler(this.AboutToolStripMenuItem_Click);
-            // 
-            // copyToolStripMenuItem1
-            // 
-            this.copyToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.copyOriginalToolStripMenuItem});
-            this.copyToolStripMenuItem1.Name = "copyToolStripMenuItem1";
-            this.copyToolStripMenuItem1.Size = new System.Drawing.Size(50, 20);
-            this.copyToolStripMenuItem1.Text = "Copy ";
-            // 
-            // copyOriginalToolStripMenuItem
-            // 
-            this.copyOriginalToolStripMenuItem.Name = "copyOriginalToolStripMenuItem";
-            this.copyOriginalToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
-            this.copyOriginalToolStripMenuItem.Text = "Copy Original";
-            this.copyOriginalToolStripMenuItem.Click += new System.EventHandler(this.CopyOriginalToolStripMenuItem_Click);
             // 
             // lblName
             // 
@@ -442,15 +414,12 @@
         private System.Windows.Forms.ToolStripMenuItem clearToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem moveToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem moveCopiedFileToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem deleteToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem deleteCopiedFileToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem copyToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem copyOriginalToolStripMenuItem;
         private System.Windows.Forms.ListView lstResult;
         private System.Windows.Forms.ColumnHeader clmInput;
         private System.Windows.Forms.ColumnHeader clmResult;
+        private System.Windows.Forms.ToolStripMenuItem showExcelFileToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem addToExistingFileToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem saveToNewFileToolStripMenuItem;
     }
 }
 

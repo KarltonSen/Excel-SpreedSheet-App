@@ -246,14 +246,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="NCAT  OrderReceiptGUI.exe" size="31680">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="NCAT  OrderReceiptGUI.exe" size="33216">
       <assemblyIdentity name="NCAT  OrderReceiptGUI" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>2BZShSkkdulRQAEb2x2BsutuuwGsN+EHiJiT4ptNif8=</dsig:DigestValue>
+        <dsig:DigestValue>sOfxOfa31KTNINjZ2cg78KnKLSQWTEba4KKruGPxGpU=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
