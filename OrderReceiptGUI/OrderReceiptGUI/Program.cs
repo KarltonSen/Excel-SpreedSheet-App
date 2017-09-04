@@ -16,7 +16,7 @@ namespace OrderReceiptGUI
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmOrderReceiptGUI());
+            Application.Run(new FrmOrderReceiptGUI());
         }
     }
 }

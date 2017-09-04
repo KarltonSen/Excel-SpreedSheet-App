@@ -63,3 +63,57 @@ C:\Users\the\OneDrive - Cabarrus County Schools\P3-BP12-jsenaye9631\Review\Order
 C:\Users\the\OneDrive - Cabarrus County Schools\P3-BP12-jsenaye9631\Review\OrderReceiptGUI\OrderReceiptGUI\obj\Debug\NCAT  OrderReceiptGUI.application
 C:\Users\the\OneDrive - Cabarrus County Schools\P3-BP12-jsenaye9631\Review\OrderReceiptGUI\OrderReceiptGUI\obj\Debug\NCAT  OrderReceiptGUI.exe
 C:\Users\the\OneDrive - Cabarrus County Schools\P3-BP12-jsenaye9631\Review\OrderReceiptGUI\OrderReceiptGUI\obj\Debug\NCAT  OrderReceiptGUI.pdb
+D:\Programming\GitHub\New-Order-App\OrderReceiptGUI\OrderReceiptGUI\obj\Debug\OrderReceiptGUI.csproj.App.config
+D:\Programming\GitHub\New-Order-App\OrderReceiptGUI\OrderReceiptGUI\obj\Debug\OrderReceiptGUI.csprojResolveAssemblyReference.cache
+D:\Programming\GitHub\New-Order-App\OrderReceiptGUI\OrderReceiptGUI\obj\Debug\OrderReceiptGUI.frmOrderReceiptGUI.resources
+D:\Programming\GitHub\New-Order-App\OrderReceiptGUI\OrderReceiptGUI\obj\Debug\OrderReceiptGUI.Properties.Resources.resources
+D:\Programming\GitHub\New-Order-App\OrderReceiptGUI\OrderReceiptGUI\obj\Debug\OrderReceiptGUI.csproj.GenerateResource.Cache
+D:\Programming\GitHub\New-Order-App\OrderReceiptGUI\OrderReceiptGUI\obj\Debug\OrderReceiptGUI.csproj.CoreCompileInputs.cache
+D:\Programming\GitHub\New-Order-App\OrderReceiptGUI\OrderReceiptGUI\obj\Debug\NCAT  OrderReceiptGUI.exe
+D:\Programming\GitHub\New-Order-App\OrderReceiptGUI\OrderReceiptGUI\obj\Debug\NCAT  OrderReceiptGUI.pdb
+D:\Programming\GitHub\New-Order-App\OrderReceiptGUI\OrderReceiptGUI\bin\Debug\NCAT  OrderReceiptGUI.exe.config
+D:\Programming\GitHub\New-Order-App\OrderReceiptGUI\OrderReceiptGUI\bin\Debug\NCAT  OrderReceiptGUI.exe.manifest
+D:\Programming\GitHub\New-Order-App\OrderReceiptGUI\OrderReceiptGUI\bin\Debug\NCAT  OrderReceiptGUI.application
+D:\Programming\GitHub\New-Order-App\OrderReceiptGUI\OrderReceiptGUI\bin\Debug\NCAT  OrderReceiptGUI.exe
+D:\Programming\GitHub\New-Order-App\OrderReceiptGUI\OrderReceiptGUI\bin\Debug\NCAT  OrderReceiptGUI.pdb
+D:\Programming\GitHub\New-Order-App\OrderReceiptGUI\OrderReceiptGUI\bin\Debug\EntityFramework.dll
+D:\Programming\GitHub\New-Order-App\OrderReceiptGUI\OrderReceiptGUI\bin\Debug\EntityFramework.SqlServer.dll
+D:\Programming\GitHub\New-Order-App\OrderReceiptGUI\OrderReceiptGUI\bin\Debug\Hyak.Common.dll
+D:\Programming\GitHub\New-Order-App\OrderReceiptGUI\OrderReceiptGUI\bin\Debug\ICSharpCode.SharpZipLib.dll
+D:\Programming\GitHub\New-Order-App\OrderReceiptGUI\OrderReceiptGUI\bin\Debug\Microsoft.Azure.Common.dll
+D:\Programming\GitHub\New-Order-App\OrderReceiptGUI\OrderReceiptGUI\bin\Debug\Microsoft.Azure.Common.NetFramework.dll
+D:\Programming\GitHub\New-Order-App\OrderReceiptGUI\OrderReceiptGUI\bin\Debug\Microsoft.Azure.SqlDatabase.ElasticScale.Client.dll
+D:\Programming\GitHub\New-Order-App\OrderReceiptGUI\OrderReceiptGUI\bin\Debug\Microsoft.Office.Project.Schema.dll
+D:\Programming\GitHub\New-Order-App\OrderReceiptGUI\OrderReceiptGUI\bin\Debug\Microsoft.Office.Project.Server.Administration.dll
+D:\Programming\GitHub\New-Order-App\OrderReceiptGUI\OrderReceiptGUI\bin\Debug\Microsoft.Office.Project.Server.Library.dll
+D:\Programming\GitHub\New-Order-App\OrderReceiptGUI\OrderReceiptGUI\bin\Debug\Microsoft.Office.Project.Server.PWA.dll
+D:\Programming\GitHub\New-Order-App\OrderReceiptGUI\OrderReceiptGUI\bin\Debug\Microsoft.Office.Project.Shared.dll
+D:\Programming\GitHub\New-Order-App\OrderReceiptGUI\OrderReceiptGUI\bin\Debug\Microsoft.Threading.Tasks.dll
+D:\Programming\GitHub\New-Order-App\OrderReceiptGUI\OrderReceiptGUI\bin\Debug\Microsoft.Threading.Tasks.Extensions.Desktop.dll
+D:\Programming\GitHub\New-Order-App\OrderReceiptGUI\OrderReceiptGUI\bin\Debug\Microsoft.Threading.Tasks.Extensions.dll
+D:\Programming\GitHub\New-Order-App\OrderReceiptGUI\OrderReceiptGUI\bin\Debug\Microsoft.WindowsAzure.Management.Sql.dll
+D:\Programming\GitHub\New-Order-App\OrderReceiptGUI\OrderReceiptGUI\bin\Debug\MySql.Data.dll
+D:\Programming\GitHub\New-Order-App\OrderReceiptGUI\OrderReceiptGUI\bin\Debug\Newtonsoft.Json.dll
+D:\Programming\GitHub\New-Order-App\OrderReceiptGUI\OrderReceiptGUI\bin\Debug\System.Data.SQLite.dll
+D:\Programming\GitHub\New-Order-App\OrderReceiptGUI\OrderReceiptGUI\bin\Debug\System.Data.SQLite.EF6.dll
+D:\Programming\GitHub\New-Order-App\OrderReceiptGUI\OrderReceiptGUI\bin\Debug\System.Data.SQLite.Linq.dll
+D:\Programming\GitHub\New-Order-App\OrderReceiptGUI\OrderReceiptGUI\bin\Debug\System.Net.Http.Extensions.dll
+D:\Programming\GitHub\New-Order-App\OrderReceiptGUI\OrderReceiptGUI\bin\Debug\System.Net.Http.Primitives.dll
+D:\Programming\GitHub\New-Order-App\OrderReceiptGUI\OrderReceiptGUI\bin\Debug\EntityFramework.xml
+D:\Programming\GitHub\New-Order-App\OrderReceiptGUI\OrderReceiptGUI\bin\Debug\EntityFramework.SqlServer.xml
+D:\Programming\GitHub\New-Order-App\OrderReceiptGUI\OrderReceiptGUI\bin\Debug\Hyak.Common.xml
+D:\Programming\GitHub\New-Order-App\OrderReceiptGUI\OrderReceiptGUI\bin\Debug\Microsoft.Azure.Common.xml
+D:\Programming\GitHub\New-Order-App\OrderReceiptGUI\OrderReceiptGUI\bin\Debug\Microsoft.Azure.Common.NetFramework.xml
+D:\Programming\GitHub\New-Order-App\OrderReceiptGUI\OrderReceiptGUI\bin\Debug\Microsoft.Azure.SqlDatabase.ElasticScale.Client.xml
+D:\Programming\GitHub\New-Order-App\OrderReceiptGUI\OrderReceiptGUI\bin\Debug\Microsoft.Threading.Tasks.xml
+D:\Programming\GitHub\New-Order-App\OrderReceiptGUI\OrderReceiptGUI\bin\Debug\Microsoft.Threading.Tasks.Extensions.xml
+D:\Programming\GitHub\New-Order-App\OrderReceiptGUI\OrderReceiptGUI\bin\Debug\Microsoft.Threading.Tasks.Extensions.Desktop.xml
+D:\Programming\GitHub\New-Order-App\OrderReceiptGUI\OrderReceiptGUI\bin\Debug\Microsoft.WindowsAzure.Management.Sql.xml
+D:\Programming\GitHub\New-Order-App\OrderReceiptGUI\OrderReceiptGUI\bin\Debug\Newtonsoft.Json.xml
+D:\Programming\GitHub\New-Order-App\OrderReceiptGUI\OrderReceiptGUI\bin\Debug\System.Data.SQLite.xml
+D:\Programming\GitHub\New-Order-App\OrderReceiptGUI\OrderReceiptGUI\bin\Debug\System.Data.SQLite.dll.config
+D:\Programming\GitHub\New-Order-App\OrderReceiptGUI\OrderReceiptGUI\bin\Debug\System.Net.Http.Extensions.xml
+D:\Programming\GitHub\New-Order-App\OrderReceiptGUI\OrderReceiptGUI\bin\Debug\System.Net.Http.Primitives.xml
+D:\Programming\GitHub\New-Order-App\OrderReceiptGUI\OrderReceiptGUI\obj\Debug\NCAT  OrderReceiptGUI.TrustInfo.xml
+D:\Programming\GitHub\New-Order-App\OrderReceiptGUI\OrderReceiptGUI\obj\Debug\NCAT  OrderReceiptGUI.exe.manifest
+D:\Programming\GitHub\New-Order-App\OrderReceiptGUI\OrderReceiptGUI\obj\Debug\NCAT  OrderReceiptGUI.application

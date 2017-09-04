@@ -1,6 +1,6 @@
 ﻿namespace OrderReceiptGUI
 {
-    partial class frmOrderReceiptGUI
+    partial class FrmOrderReceiptGUI
     {
         /// <summary>
         /// Required designer variable.
@@ -30,12 +30,8 @@
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.inputToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.displayToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.calculateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.saveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.addANewRecordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.outputNewRecordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.saveNewRecordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.clearToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -48,14 +44,13 @@
             this.copyToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.copyOriginalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lblName = new System.Windows.Forms.Label();
-            this.lblStreetAddress = new System.Windows.Forms.Label();
+            this.lblAddress = new System.Windows.Forms.Label();
             this.lblCity = new System.Windows.Forms.Label();
             this.lblState = new System.Windows.Forms.Label();
             this.lblZipcode = new System.Windows.Forms.Label();
             this.lblQuantity = new System.Windows.Forms.Label();
-            this.txtName = new System.Windows.Forms.TextBox();
+            this.txtItemName = new System.Windows.Forms.TextBox();
             this.lblDisplay = new System.Windows.Forms.Label();
-            this.lblOutputAll = new System.Windows.Forms.Label();
             this.txtAddress = new System.Windows.Forms.TextBox();
             this.txtCity = new System.Windows.Forms.TextBox();
             this.txtState = new System.Windows.Forms.TextBox();
@@ -65,8 +60,11 @@
             this.txtBudget = new System.Windows.Forms.TextBox();
             this.lblCost = new System.Windows.Forms.Label();
             this.txtCost = new System.Windows.Forms.TextBox();
-            this.txtlaboratory = new System.Windows.Forms.TextBox();
+            this.txtLaboratory = new System.Windows.Forms.TextBox();
             this.lblLaboratory = new System.Windows.Forms.Label();
+            this.lstResult = new System.Windows.Forms.ListView();
+            this.clmInput = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.clmResult = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -80,88 +78,54 @@
             this.copyToolStripMenuItem1});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(884, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(848, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // fileToolStripMenuItem
             // 
             this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.inputToolStripMenuItem,
-            this.displayToolStripMenuItem,
+            this.calculateToolStripMenuItem,
             this.saveToolStripMenuItem,
-            this.addANewRecordToolStripMenuItem,
             this.clearToolStripMenuItem,
             this.toolStripSeparator1,
             this.exitToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
             this.fileToolStripMenuItem.Size = new System.Drawing.Size(40, 20);
             this.fileToolStripMenuItem.Text = "File ";
-            this.fileToolStripMenuItem.Click += new System.EventHandler(this.fileToolStripMenuItem_Click);
             // 
-            // inputToolStripMenuItem
+            // calculateToolStripMenuItem
             // 
-            this.inputToolStripMenuItem.Name = "inputToolStripMenuItem";
-            this.inputToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
-            this.inputToolStripMenuItem.Text = "Input";
-            this.inputToolStripMenuItem.Click += new System.EventHandler(this.inputToolStripMenuItem_Click);
-            // 
-            // displayToolStripMenuItem
-            // 
-            this.displayToolStripMenuItem.Name = "displayToolStripMenuItem";
-            this.displayToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
-            this.displayToolStripMenuItem.Text = "Output First Record";
-            this.displayToolStripMenuItem.Click += new System.EventHandler(this.displayToolStripMenuItem_Click);
+            this.calculateToolStripMenuItem.Name = "calculateToolStripMenuItem";
+            this.calculateToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
+            this.calculateToolStripMenuItem.Text = "Calculate";
+            this.calculateToolStripMenuItem.Click += new System.EventHandler(this.CalculateToolStripMenuItem_Click);
             // 
             // saveToolStripMenuItem
             // 
             this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
-            this.saveToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
-            this.saveToolStripMenuItem.Text = "Save";
-            this.saveToolStripMenuItem.Click += new System.EventHandler(this.saveToolStripMenuItem_Click);
-            // 
-            // addANewRecordToolStripMenuItem
-            // 
-            this.addANewRecordToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.outputNewRecordToolStripMenuItem,
-            this.saveNewRecordToolStripMenuItem});
-            this.addANewRecordToolStripMenuItem.Name = "addANewRecordToolStripMenuItem";
-            this.addANewRecordToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
-            this.addANewRecordToolStripMenuItem.Text = "Add a New Record";
-            this.addANewRecordToolStripMenuItem.Click += new System.EventHandler(this.addANewRecordToolStripMenuItem_Click);
-            // 
-            // outputNewRecordToolStripMenuItem
-            // 
-            this.outputNewRecordToolStripMenuItem.Name = "outputNewRecordToolStripMenuItem";
-            this.outputNewRecordToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
-            this.outputNewRecordToolStripMenuItem.Text = "outputNewRecord";
-            this.outputNewRecordToolStripMenuItem.Click += new System.EventHandler(this.outputNewRecordToolStripMenuItem_Click);
-            // 
-            // saveNewRecordToolStripMenuItem
-            // 
-            this.saveNewRecordToolStripMenuItem.Name = "saveNewRecordToolStripMenuItem";
-            this.saveNewRecordToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
-            this.saveNewRecordToolStripMenuItem.Text = "Save New Record";
-            this.saveNewRecordToolStripMenuItem.Click += new System.EventHandler(this.saveNewRecordToolStripMenuItem_Click);
+            this.saveToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
+            this.saveToolStripMenuItem.Text = "Save to Excel file";
+            this.saveToolStripMenuItem.Click += new System.EventHandler(this.SaveToolStripMenuItem_Click);
             // 
             // clearToolStripMenuItem
             // 
             this.clearToolStripMenuItem.Name = "clearToolStripMenuItem";
             this.clearToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
-            this.clearToolStripMenuItem.Text = "Clear";
-            this.clearToolStripMenuItem.Click += new System.EventHandler(this.clearToolStripMenuItem_Click);
+            this.clearToolStripMenuItem.Text = "Clear Result";
+            this.clearToolStripMenuItem.Click += new System.EventHandler(this.ClearToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(174, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(169, 6);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
             this.exitToolStripMenuItem.Text = "Exit";
-            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this.ExitToolStripMenuItem_Click);
             // 
             // moveToolStripMenuItem
             // 
@@ -176,7 +140,7 @@
             this.moveCopiedFileToolStripMenuItem.Name = "moveCopiedFileToolStripMenuItem";
             this.moveCopiedFileToolStripMenuItem.Size = new System.Drawing.Size(166, 22);
             this.moveCopiedFileToolStripMenuItem.Text = "Move Copied File";
-            this.moveCopiedFileToolStripMenuItem.Click += new System.EventHandler(this.moveCopiedFileToolStripMenuItem_Click);
+            this.moveCopiedFileToolStripMenuItem.Click += new System.EventHandler(this.MoveCopiedFileToolStripMenuItem_Click);
             // 
             // deleteToolStripMenuItem
             // 
@@ -191,7 +155,7 @@
             this.deleteCopiedFileToolStripMenuItem.Name = "deleteCopiedFileToolStripMenuItem";
             this.deleteCopiedFileToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
             this.deleteCopiedFileToolStripMenuItem.Text = "Delete Copied File";
-            this.deleteCopiedFileToolStripMenuItem.Click += new System.EventHandler(this.deleteCopiedFileToolStripMenuItem_Click);
+            this.deleteCopiedFileToolStripMenuItem.Click += new System.EventHandler(this.DeleteCopiedFileToolStripMenuItem_Click);
             // 
             // helpToolStripMenuItem
             // 
@@ -204,9 +168,9 @@
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.aboutToolStripMenuItem.Text = "About";
-            this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
+            this.aboutToolStripMenuItem.Click += new System.EventHandler(this.AboutToolStripMenuItem_Click);
             // 
             // copyToolStripMenuItem1
             // 
@@ -221,208 +185,203 @@
             this.copyOriginalToolStripMenuItem.Name = "copyOriginalToolStripMenuItem";
             this.copyOriginalToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
             this.copyOriginalToolStripMenuItem.Text = "Copy Original";
-            this.copyOriginalToolStripMenuItem.Click += new System.EventHandler(this.copyOriginalToolStripMenuItem_Click);
+            this.copyOriginalToolStripMenuItem.Click += new System.EventHandler(this.CopyOriginalToolStripMenuItem_Click);
             // 
             // lblName
             // 
             this.lblName.AutoSize = true;
             this.lblName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblName.Location = new System.Drawing.Point(39, 81);
+            this.lblName.Location = new System.Drawing.Point(9, 82);
             this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(83, 20);
+            this.lblName.Size = new System.Drawing.Size(91, 20);
             this.lblName.TabIndex = 1;
-            this.lblName.Text = "ItemName";
-            this.lblName.Visible = false;
+            this.lblName.Text = "Item Name:";
             // 
-            // lblStreetAddress
+            // lblAddress
             // 
-            this.lblStreetAddress.AutoSize = true;
-            this.lblStreetAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblStreetAddress.Location = new System.Drawing.Point(15, 125);
-            this.lblStreetAddress.Name = "lblStreetAddress";
-            this.lblStreetAddress.Size = new System.Drawing.Size(120, 20);
-            this.lblStreetAddress.TabIndex = 2;
-            this.lblStreetAddress.Text = "Street Address:";
-            this.lblStreetAddress.Visible = false;
+            this.lblAddress.AutoSize = true;
+            this.lblAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAddress.Location = new System.Drawing.Point(26, 106);
+            this.lblAddress.Name = "lblAddress";
+            this.lblAddress.Size = new System.Drawing.Size(72, 20);
+            this.lblAddress.TabIndex = 2;
+            this.lblAddress.Text = "Address:";
             // 
             // lblCity
             // 
             this.lblCity.AutoSize = true;
             this.lblCity.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCity.Location = new System.Drawing.Point(73, 171);
+            this.lblCity.Location = new System.Drawing.Point(59, 132);
             this.lblCity.Name = "lblCity";
-            this.lblCity.Size = new System.Drawing.Size(35, 20);
+            this.lblCity.Size = new System.Drawing.Size(39, 20);
             this.lblCity.TabIndex = 3;
-            this.lblCity.Text = "City";
-            this.lblCity.Visible = false;
+            this.lblCity.Text = "City:";
             // 
             // lblState
             // 
             this.lblState.AutoSize = true;
             this.lblState.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblState.Location = new System.Drawing.Point(60, 218);
+            this.lblState.Location = new System.Drawing.Point(46, 158);
             this.lblState.Name = "lblState";
-            this.lblState.Size = new System.Drawing.Size(48, 20);
+            this.lblState.Size = new System.Drawing.Size(52, 20);
             this.lblState.TabIndex = 4;
-            this.lblState.Text = "State";
-            this.lblState.Visible = false;
+            this.lblState.Text = "State:";
             // 
             // lblZipcode
             // 
             this.lblZipcode.AutoSize = true;
             this.lblZipcode.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblZipcode.Location = new System.Drawing.Point(47, 257);
+            this.lblZipcode.Location = new System.Drawing.Point(21, 184);
             this.lblZipcode.Name = "lblZipcode";
-            this.lblZipcode.Size = new System.Drawing.Size(69, 20);
+            this.lblZipcode.Size = new System.Drawing.Size(77, 20);
             this.lblZipcode.TabIndex = 5;
-            this.lblZipcode.Text = "ZipCode";
-            this.lblZipcode.Visible = false;
+            this.lblZipcode.Text = "Zip Code:";
             // 
             // lblQuantity
             // 
             this.lblQuantity.AutoSize = true;
             this.lblQuantity.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblQuantity.Location = new System.Drawing.Point(54, 305);
+            this.lblQuantity.Location = new System.Drawing.Point(26, 210);
             this.lblQuantity.Name = "lblQuantity";
-            this.lblQuantity.Size = new System.Drawing.Size(68, 20);
+            this.lblQuantity.Size = new System.Drawing.Size(72, 20);
             this.lblQuantity.TabIndex = 6;
-            this.lblQuantity.Text = "Quantity";
-            this.lblQuantity.Visible = false;
+            this.lblQuantity.Text = "Quantity:";
             // 
-            // txtName
+            // txtItemName
             // 
-            this.txtName.Location = new System.Drawing.Point(131, 83);
-            this.txtName.Multiline = true;
-            this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(276, 18);
-            this.txtName.TabIndex = 7;
-            this.txtName.Visible = false;
+            this.txtItemName.Location = new System.Drawing.Point(107, 82);
+            this.txtItemName.Multiline = true;
+            this.txtItemName.Name = "txtItemName";
+            this.txtItemName.Size = new System.Drawing.Size(281, 20);
+            this.txtItemName.TabIndex = 1;
             // 
             // lblDisplay
             // 
             this.lblDisplay.AutoSize = true;
             this.lblDisplay.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDisplay.Location = new System.Drawing.Point(419, 30);
+            this.lblDisplay.Location = new System.Drawing.Point(394, 28);
             this.lblDisplay.Name = "lblDisplay";
             this.lblDisplay.Size = new System.Drawing.Size(76, 25);
             this.lblDisplay.TabIndex = 8;
             this.lblDisplay.Text = "Output";
-            this.lblDisplay.Visible = false;
-            // 
-            // lblOutputAll
-            // 
-            this.lblOutputAll.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblOutputAll.Location = new System.Drawing.Point(424, 55);
-            this.lblOutputAll.Name = "lblOutputAll";
-            this.lblOutputAll.Size = new System.Drawing.Size(444, 475);
-            this.lblOutputAll.TabIndex = 9;
-            this.lblOutputAll.Visible = false;
             // 
             // txtAddress
             // 
-            this.txtAddress.Location = new System.Drawing.Point(141, 127);
+            this.txtAddress.Location = new System.Drawing.Point(107, 108);
             this.txtAddress.Name = "txtAddress";
-            this.txtAddress.Size = new System.Drawing.Size(266, 20);
-            this.txtAddress.TabIndex = 10;
-            this.txtAddress.Visible = false;
+            this.txtAddress.Size = new System.Drawing.Size(281, 20);
+            this.txtAddress.TabIndex = 2;
             // 
             // txtCity
             // 
-            this.txtCity.Location = new System.Drawing.Point(126, 173);
+            this.txtCity.Location = new System.Drawing.Point(107, 134);
             this.txtCity.Name = "txtCity";
             this.txtCity.Size = new System.Drawing.Size(281, 20);
-            this.txtCity.TabIndex = 11;
-            this.txtCity.Visible = false;
+            this.txtCity.TabIndex = 3;
             // 
             // txtState
             // 
-            this.txtState.Location = new System.Drawing.Point(126, 218);
+            this.txtState.Location = new System.Drawing.Point(107, 160);
             this.txtState.Name = "txtState";
             this.txtState.Size = new System.Drawing.Size(281, 20);
-            this.txtState.TabIndex = 12;
-            this.txtState.Visible = false;
+            this.txtState.TabIndex = 4;
             // 
             // txtZipCode
             // 
-            this.txtZipCode.Location = new System.Drawing.Point(131, 257);
+            this.txtZipCode.Location = new System.Drawing.Point(107, 186);
             this.txtZipCode.Name = "txtZipCode";
-            this.txtZipCode.Size = new System.Drawing.Size(276, 20);
-            this.txtZipCode.TabIndex = 13;
-            this.txtZipCode.Visible = false;
+            this.txtZipCode.Size = new System.Drawing.Size(281, 20);
+            this.txtZipCode.TabIndex = 5;
             // 
             // txtQuantity
             // 
-            this.txtQuantity.Location = new System.Drawing.Point(131, 305);
+            this.txtQuantity.Location = new System.Drawing.Point(107, 212);
             this.txtQuantity.Name = "txtQuantity";
-            this.txtQuantity.Size = new System.Drawing.Size(276, 20);
-            this.txtQuantity.TabIndex = 14;
-            this.txtQuantity.Visible = false;
+            this.txtQuantity.Size = new System.Drawing.Size(281, 20);
+            this.txtQuantity.TabIndex = 6;
             // 
             // lblBudgetPrompt
             // 
             this.lblBudgetPrompt.AutoSize = true;
             this.lblBudgetPrompt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBudgetPrompt.Location = new System.Drawing.Point(60, 360);
+            this.lblBudgetPrompt.Location = new System.Drawing.Point(33, 236);
             this.lblBudgetPrompt.Name = "lblBudgetPrompt";
-            this.lblBudgetPrompt.Size = new System.Drawing.Size(61, 20);
+            this.lblBudgetPrompt.Size = new System.Drawing.Size(65, 20);
             this.lblBudgetPrompt.TabIndex = 16;
-            this.lblBudgetPrompt.Text = "Budget";
-            this.lblBudgetPrompt.Visible = false;
+            this.lblBudgetPrompt.Text = "Budget:";
             // 
             // txtBudget
             // 
-            this.txtBudget.Location = new System.Drawing.Point(131, 360);
+            this.txtBudget.Location = new System.Drawing.Point(107, 238);
             this.txtBudget.Name = "txtBudget";
-            this.txtBudget.Size = new System.Drawing.Size(276, 20);
-            this.txtBudget.TabIndex = 17;
-            this.txtBudget.Visible = false;
+            this.txtBudget.Size = new System.Drawing.Size(281, 20);
+            this.txtBudget.TabIndex = 7;
             // 
             // lblCost
             // 
             this.lblCost.AutoSize = true;
             this.lblCost.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCost.Location = new System.Drawing.Point(66, 415);
+            this.lblCost.Location = new System.Drawing.Point(52, 262);
             this.lblCost.Name = "lblCost";
-            this.lblCost.Size = new System.Drawing.Size(42, 20);
+            this.lblCost.Size = new System.Drawing.Size(46, 20);
             this.lblCost.TabIndex = 18;
-            this.lblCost.Text = "Cost";
-            this.lblCost.Visible = false;
+            this.lblCost.Text = "Cost:";
             // 
             // txtCost
             // 
-            this.txtCost.Location = new System.Drawing.Point(131, 417);
+            this.txtCost.Location = new System.Drawing.Point(107, 264);
             this.txtCost.Name = "txtCost";
-            this.txtCost.Size = new System.Drawing.Size(276, 20);
-            this.txtCost.TabIndex = 19;
-            this.txtCost.Visible = false;
+            this.txtCost.Size = new System.Drawing.Size(281, 20);
+            this.txtCost.TabIndex = 8;
             // 
-            // txtlaboratory
+            // txtLaboratory
             // 
-            this.txtlaboratory.Location = new System.Drawing.Point(131, 34);
-            this.txtlaboratory.Name = "txtlaboratory";
-            this.txtlaboratory.Size = new System.Drawing.Size(276, 20);
-            this.txtlaboratory.TabIndex = 21;
-            this.txtlaboratory.Visible = false;
+            this.txtLaboratory.Location = new System.Drawing.Point(107, 56);
+            this.txtLaboratory.Name = "txtLaboratory";
+            this.txtLaboratory.Size = new System.Drawing.Size(281, 20);
+            this.txtLaboratory.TabIndex = 0;
             // 
             // lblLaboratory
             // 
             this.lblLaboratory.AutoSize = true;
             this.lblLaboratory.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLaboratory.Location = new System.Drawing.Point(43, 35);
+            this.lblLaboratory.Location = new System.Drawing.Point(9, 56);
             this.lblLaboratory.Name = "lblLaboratory";
-            this.lblLaboratory.Size = new System.Drawing.Size(79, 20);
+            this.lblLaboratory.Size = new System.Drawing.Size(89, 20);
             this.lblLaboratory.TabIndex = 22;
-            this.lblLaboratory.Text = "laboratory";
-            this.lblLaboratory.Visible = false;
+            this.lblLaboratory.Text = "Laboratory:";
             // 
-            // frmOrderReceiptGUI
+            // lstResult
+            // 
+            this.lstResult.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.clmInput,
+            this.clmResult});
+            this.lstResult.FullRowSelect = true;
+            this.lstResult.Location = new System.Drawing.Point(394, 56);
+            this.lstResult.Name = "lstResult";
+            this.lstResult.Size = new System.Drawing.Size(442, 469);
+            this.lstResult.TabIndex = 23;
+            this.lstResult.UseCompatibleStateImageBehavior = false;
+            this.lstResult.View = System.Windows.Forms.View.Details;
+            // 
+            // clmInput
+            // 
+            this.clmInput.Text = "Input";
+            this.clmInput.Width = 87;
+            // 
+            // clmResult
+            // 
+            this.clmResult.Text = "Result";
+            this.clmResult.Width = 99;
+            // 
+            // FrmOrderReceiptGUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(884, 540);
-            this.ControlBox = false;
+            this.ClientSize = new System.Drawing.Size(848, 540);
+            this.Controls.Add(this.lstResult);
             this.Controls.Add(this.lblLaboratory);
-            this.Controls.Add(this.txtlaboratory);
+            this.Controls.Add(this.txtLaboratory);
             this.Controls.Add(this.txtCost);
             this.Controls.Add(this.lblCost);
             this.Controls.Add(this.txtBudget);
@@ -432,20 +391,20 @@
             this.Controls.Add(this.txtState);
             this.Controls.Add(this.txtCity);
             this.Controls.Add(this.txtAddress);
-            this.Controls.Add(this.lblOutputAll);
             this.Controls.Add(this.lblDisplay);
-            this.Controls.Add(this.txtName);
+            this.Controls.Add(this.txtItemName);
             this.Controls.Add(this.lblQuantity);
             this.Controls.Add(this.lblZipcode);
             this.Controls.Add(this.lblState);
             this.Controls.Add(this.lblCity);
-            this.Controls.Add(this.lblStreetAddress);
+            this.Controls.Add(this.lblAddress);
             this.Controls.Add(this.lblName);
             this.Controls.Add(this.menuStrip1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.MainMenuStrip = this.menuStrip1;
             this.MinimizeBox = false;
-            this.Name = "frmOrderReceiptGUI";
-            this.Text = "OrderReceiptGUI";
+            this.Name = "FrmOrderReceiptGUI";
+            this.Text = "Order Receipt";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -459,14 +418,13 @@
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
         private System.Windows.Forms.Label lblName;
-        private System.Windows.Forms.Label lblStreetAddress;
+        private System.Windows.Forms.Label lblAddress;
         private System.Windows.Forms.Label lblCity;
         private System.Windows.Forms.Label lblState;
         private System.Windows.Forms.Label lblZipcode;
         private System.Windows.Forms.Label lblQuantity;
-        private System.Windows.Forms.TextBox txtName;
+        private System.Windows.Forms.TextBox txtItemName;
         private System.Windows.Forms.Label lblDisplay;
-        private System.Windows.Forms.Label lblOutputAll;
         private System.Windows.Forms.TextBox txtAddress;
         private System.Windows.Forms.TextBox txtCity;
         private System.Windows.Forms.TextBox txtState;
@@ -476,15 +434,11 @@
         private System.Windows.Forms.TextBox txtBudget;
         private System.Windows.Forms.Label lblCost;
         private System.Windows.Forms.TextBox txtCost;
-        private System.Windows.Forms.TextBox txtlaboratory;
+        private System.Windows.Forms.TextBox txtLaboratory;
         private System.Windows.Forms.Label lblLaboratory;
         private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem inputToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem displayToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem calculateToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem saveToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem addANewRecordToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem outputNewRecordToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem saveNewRecordToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem clearToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
@@ -494,6 +448,9 @@
         private System.Windows.Forms.ToolStripMenuItem deleteCopiedFileToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem copyToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem copyOriginalToolStripMenuItem;
+        private System.Windows.Forms.ListView lstResult;
+        private System.Windows.Forms.ColumnHeader clmInput;
+        private System.Windows.Forms.ColumnHeader clmResult;
     }
 }
 

@@ -3,7 +3,7 @@
   <assemblyIdentity name="NCAT  OrderReceiptGUI.application" version="2.0.0.4" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" xmlns="urn:schemas-microsoft-com:asm.v1" />
   <description asmv2:publisher="NCAT  OrderReceiptGUI" asmv2:product="NCAT  OrderReceiptGUI" xmlns="urn:schemas-microsoft-com:asm.v1" />
   <deployment install="true" mapFileExtensions="true">
-    <deploymentProvider codebase="http://livingroompc/NCAT%20%20OrderReceiptGUI/NCAT%20%20OrderReceiptGUI.application" />
+    <deploymentProvider codebase="http://desktop-sslt7j1/NCAT%20%20OrderReceiptGUI/NCAT%20%20OrderReceiptGUI.application" />
   </deployment>
   <compatibleFrameworks xmlns="urn:schemas-microsoft-com:clickonce.v2">
     <framework targetVersion="4.5" profile="Full" supportedRuntime="4.0.30319" />
@@ -16,7 +16,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>OA5oo/xEudY9aVrrIlb5wG3KUYsryEc4kpbqLbhjs/o=</dsig:DigestValue>
+        <dsig:DigestValue>wso2xjtUdxHSCAcbBGFE2KZK4acyUu1aueJrBK7cXB0=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
